@@ -33,6 +33,11 @@ namespace SS14.Watchdog.Configuration
         public bool DumpOnTimeout { get; set; } = true;
 
         /// <summary>
+        /// Data dir argument override
+        /// </summary>
+        public string? DataDir { get; set; }
+
+        /// <summary>
         /// When <see cref="DumpOnTimeout"/> is on, the type of dump to make.
         /// </summary>
         public DumpType TimeoutDumpType { get; set; } = DumpType.Normal;

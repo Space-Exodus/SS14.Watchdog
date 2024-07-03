@@ -334,7 +334,7 @@ public sealed partial class ServerInstance
             "--cvar", $"watchdog.baseUrl={_baseServerAddress}",
 
             "--config-file", Path.Combine(InstanceDir, "config.toml"),
-            "--data-dir", Path.Combine(InstanceDir, "data"),
+            "--data-dir", _instanceConfig.DataDir ?? Path.Combine(InstanceDir, "data"),
         };
 
         // Prepare the user provided arguments
